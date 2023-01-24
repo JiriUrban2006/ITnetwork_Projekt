@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="cs-cz">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Registrace</title>
+</head>
+
+<body>
+    <div>
+        <nav class="nav navbar navbar-expand-md navbar-dark bg-dark justify-content-around">
+            <a class="nav-link" href="#">Pojištění</a>
+        </nav>
+    </div>
+    <section class="container py-5">
+        <div class="mb-4">
+            <h2>Pojištěnci</h2>
+        </div>
+        <div>
+            <table class="table table-bordered table-hover table-responsive-sm">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Jméno a přijmení</th>
+                        <th scope="col">Věk</th>
+                        <th scope="col">Telefon</th>
+                    </tr>
+                </thead>
+                <tbody id="tabulka-pojistencu">
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="form-row text-center">
+            <div class="col my-2">
+                <button class="btn btn-primary" id="nacist">Načíst dalších 5</button>
+            </div>
+    </section>
+    <section class="container py-5">
+        <div class="mb-4">
+            <h2>Nový pojištěnec</h2>
+        </div>
+        <img src="avatar.png" class="img-fluid float-left border border-primary mr-5" alt="avatar" width="150">
+
+        <form id="needs-validation" novalidate="novalidate">
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="registrace-jmeno">Jméno</label>
+                    <input type="text" id="jmeno" class="form-control" autocomplete="on" required>
+                    <div class="invalid-feedback">
+                        Zadejte prosím své celé jméno.
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label for="registrace-prijmeni">Příjmení</label>
+                    <input type="text" id="prijmeni" class="form-control" autocomplete="on" required>
+                    <div class="invalid-feedback">
+                        Zadejte prosím své celé přijmení.
+                    </div>
+                </div>
+                <div class="form-group col-6">
+                    <label for="registrace-vek">Věk</label>
+                    <input type="text" id="vek" class="form-control" autocomplete="on" required>
+                    <div class="invalid-feedback">
+                        Zadejte prosím svůj věk.
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label for="registrace-telefon">Telefon</label>
+                    <input type="tel" id="telefon" class="form-control" autocomplete="on" required>
+                    <div class="invalid-feedback">
+                        Zadejte prosím celé 9-ti místné číslo.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row text-center">
+                <div class="col my-2">
+                    <button type="submit" class="btn btn-primary" id="ulozit">Uložit</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <script src="js/Pojistenec.js"></script>
+    <script src="js/Zaznam.js"></script>
+    <script src="js/Validace.js"></script>
+    <script src="js/obsluha.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
